@@ -143,13 +143,13 @@
             .line{
                 opacity: 0%;
                 width: 80px;
-                 height: 1px;
+                 height: 2px;
                  background-color:@black-main;
                  margin-left: 5px;
             }
             opacity: 60%;
             font-family: 'Cormorant Garamond', serif;
-            .align-center;
+            align-items: center;
             color: @color-white;
             .flex-box;
             -webkit-box-pack: end;
@@ -294,12 +294,62 @@
             }       
     }
 
-    .banner-2 {
+    .banner-2{
         text-align: right;
+        position: relative;
+        &-name{
+        position: absolute;
+        bottom: 164px;
+        left: 87px;
+        font-family: 'Fira Sans', sans-serif;
+        text-transform: uppercase; 
+        font-weight: 600;
+        font-size: 14px;
+        color: @black-main;
+        letter-spacing: 0.2em;
+        }
+        &-prd{
+            position: absolute;
+            bottom: 53px;
+            left: 87px;
+            letter-spacing: 0.04em;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px;
+            color: @color-main-web;
+        }
     }
 
     .banner-4 {
         text-align: right;
+        position: relative;
+        &-name{
+            position: absolute;
+            top: 130px;
+            left: 78px;
+            text-align: left;
+            font-weight: bold;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            color: @black-main;
+            letter-spacing: 0.01em;
+            p{
+                margin-bottom: -15px;
+            }
+        }
+        &-note{
+            position: absolute;
+            top: 272px;
+            left: 83px;
+            text-align: left;
+            font-weight: 600;
+            p{
+                margin-bottom: 5px;
+            }
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 14px;
+            color: @gray-fontcolor;
+            letter-spacing: 0.05em;
+        }
     }
 
     .prd-2 {
@@ -633,7 +683,7 @@
                 a {
                     text-decoration: none;
                     text-transform: uppercase;
-                    color: @light-gray-fontcolor;
+                    color: @gray-fontcolor;
                     font-size: 14px;
                     letter-spacing: 0.07em;
                     font-family: 'Fira Sans', serif;
@@ -763,14 +813,17 @@
             }
         }
         &-bottom{
-            right: 10px;
-            top: 172px;
+            right: -15px;
+            top: 163px;
+            a{
+                .line{
+                    width: 30px;
+                 }
+            }
             &-inner{
                 font-size: 14px;
             }
-            .line{
-                display: none;
-            }
+            
         }
         &-top {
             
@@ -824,6 +877,31 @@
                 top: 17%;
                 right: 6%;
             }       
+    }
+    .banner-2{
+        &-name{
+            font-size: 14px;
+            bottom: 164px;
+            left: 87px;
+           
+        }
+        &-prd{
+            font-size: 48px;
+            left: 87px;
+            bottom: 57px;
+        }
+    }
+.banner-4{
+        &-name{
+            font-size: 38px;
+            top: 15px;
+            left: 10px;
+        }
+        &-note{
+            font-size: 10px;
+            top: 115px;
+            left: 10px;
+        }
     }
     }
 
@@ -894,8 +972,11 @@
            
         }
         &-bottom{
-            right: 40px;
+            right: -15px;
             top: 450px;
+            .line{
+                width: 30px;
+             }
         }
         .banner-content{
             left: 40px;
@@ -960,6 +1041,28 @@
             font-size: 18px;
             margin-top: -95px;
         }
+    .banner-2{
+            &-name{
+                bottom: 108px;
+               font-size: 10px;
+               left: 60px;
+            }
+            &-prd{
+                font-size: 36px;
+                left: 60px;
+                
+            }
+        }
+    .banner-4{
+            &-name{
+                top: 40px;
+                left: 40px;
+            }
+            &-note{
+                top: 170px;
+                left: 42px;
+            }
+        }
     }
 //feature-prd
     .feature-prd {
@@ -994,6 +1097,30 @@
                 img{
                     width: 100%;
                 }
+            }
+        }
+    }
+    .feature-items{
+        .banner-2{
+            &-name{
+                font-size: 10px;
+                bottom: 95px;
+                left: 40px;
+               
+            }
+            &-prd{
+                font-size: 32px;
+                left: 40px;
+            }
+        }
+    .banner-4{
+            &-name{
+                font-size: 38px;
+                top: 15px;
+            }
+            &-note{
+                font-size: 10px;
+                top: 115px;
             }
         }
     }
@@ -1048,6 +1175,25 @@
                 max-width: 96%;
             }
         }
+        .banner-2{
+                &-name{
+                    bottom: 122px;
+                    left: 120px;
+                   
+                }
+                &-prd{
+                    font-size: 50px;
+                    left: 120px;
+                }
+            }
+        .banner-4{
+                &-name{
+                    top: 90px;
+                }
+                &-note{
+                    top: 215px;
+                }
+            }
     }
 
     .feature-prd {
@@ -1063,6 +1209,17 @@
             bottom: 0;
         }
 
+    }
+    .feature-items{
+        .banner-2{
+            &-name{
+                left: 60px;
+            }
+            &-prd{
+                left: 60px;
+            }
+        }
+       
     }
 }
 
