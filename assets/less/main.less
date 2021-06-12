@@ -143,13 +143,13 @@
             .line{
                 opacity: 0%;
                 width: 80px;
-                 height: 1px;
+                 height: 2px;
                  background-color:@black-main;
                  margin-left: 5px;
             }
             opacity: 60%;
             font-family: 'Cormorant Garamond', serif;
-            .align-center;
+            align-items: center;
             color: @color-white;
             .flex-box;
             -webkit-box-pack: end;
@@ -281,25 +281,120 @@
         margin-bottom: 48px;
     }
 
-    .banner-1 {
-        text-align: center;
+   .banner-1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .banner-1-inner{
         position: relative;
-            .sale-bn{
-                position: relative;
-            }
-            .sale-sm-banner{
+        background-image: url('../images/banner-sale.jpg');  
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        
+        height: 100%;
+        
+        .content{
+            text-align: center;
+            color: @black-main;
+            position: absolute;
+            
+            
+            img{
                 position: absolute;
-                top: 17%;
-                right: 6%;
-            }       
+                display: block;
+                z-index: 5;   
+            }
+            &-1{
+                position: relative;
+                z-index: 10;
+                font-family: 'Fira Sans', serif;
+                
+                letter-spacing: 0.2em;
+                font-weight: 600;
+                
+            }
+            &-2{
+                position: relative;
+                z-index: 10;
+                font-family: 'Cormorant Garamond', serif;
+                font-weight: 300;
+                
+            }
+            &-3{
+                position: relative;
+                z-index: 10;
+                letter-spacing: 0.01em;
+                font-family: 'Cormorant Garamond', serif;
+                
+                
+            }
+            &-4{
+                position: relative;
+                z-index: 10;
+                font-family: 'Fira Sans', serif;
+                font-weight: 900;
+                letter-spacing: 0.2em;
+            }
+        }
     }
-
-    .banner-2 {
+   }
+    .banner-2{
         text-align: right;
+        position: relative;
+        &-name{
+        position: absolute;
+        bottom: 164px;
+        left: 87px;
+        font-family: 'Fira Sans', sans-serif;
+        text-transform: uppercase; 
+        font-weight: 600;
+        font-size: 14px;
+        color: @black-main;
+        letter-spacing: 0.2em;
+        }
+        &-prd{
+            position: absolute;
+            bottom: 53px;
+            left: 87px;
+            letter-spacing: 0.04em;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px;
+            color: @color-main-web;
+        }
     }
 
     .banner-4 {
         text-align: right;
+        position: relative;
+        &-name{
+            position: absolute;
+            top: 130px;
+            left: 78px;
+            text-align: left;
+            font-weight: bold;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            color: @black-main;
+            letter-spacing: 0.01em;
+            p{
+                margin-bottom: -15px;
+            }
+        }
+        &-note{
+            position: absolute;
+            top: 272px;
+            left: 83px;
+            text-align: left;
+            font-weight: 600;
+            p{
+                margin-bottom: 5px;
+            }
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 14px;
+            color: @gray-fontcolor;
+            letter-spacing: 0.05em;
+        }
     }
 
     .prd-2 {
@@ -367,6 +462,11 @@
         padding: 55px 0 42px 0;
 
         .prd {
+            .carousel{
+                .carousel-control-prev,.carousel-control-next{
+                    visibility: hidden;
+                }
+                }
             padding: 0 15px;
             text-align: center;
 
@@ -455,7 +555,13 @@
                 -ms-transform: scale(1);
                     transform: scale(1);
         }
-
+        .prd:hover{
+            .carousel{
+                .carousel-control-prev,.carousel-control-next{
+                    visibility: visible;
+                }
+                }
+        }
         .prd:hover img {
             opacity: 50%;
             .transition(0.8s);
@@ -763,14 +869,17 @@
             }
         }
         &-bottom{
-            right: 10px;
-            top: 172px;
+            right: -15px;
+            top: 163px;
+            a{
+                .line{
+                    width: 30px;
+                 }
+            }
             &-inner{
                 font-size: 14px;
             }
-            .line{
-                display: none;
-            }
+            
         }
         &-top {
             
@@ -818,24 +927,80 @@
             padding: 0px
         }
         .banner-1 {
-            .sale-sm-banner{
-                width: 30%;
-                position: absolute;
-                top: 17%;
+         img{
+            width: 100%;
+         }
+          height: 420px;  
+         &-inner{
+             width: 100%;
+             .content{
+                height: 255px;
+                width: 210px;
+                top: 33%;
                 right: 6%;
-            }       
+                &-1{
+                    font-size: 20px;
+                    margin-top: 5%;
+                }
+                &-2{
+                    font-size: 70px;
+                }
+                &-3{
+                    font-size: 18px;
+                }
+                &-4{
+                    font-size: 13px;
+                }
+             }
+         }
+    }
+    .banner-2{
+        &-name{
+            font-size: 14px;
+            bottom: 164px;
+            left: 87px;
+           
+        }
+        &-prd{
+            font-size: 48px;
+            left: 87px;
+            bottom: 57px;
+        }
+    }
+.banner-4{
+        &-name{
+            font-size: 38px;
+            top: 15px;
+            left: 10px;
+        }
+        &-note{
+            font-size: 10px;
+            top: 115px;
+            left: 10px;
+        }
     }
     }
 
     //feature-prd
     .feature-prd {
+        .min-container{
+            padding: 0 15px;
+        }
+        .min-row{
+            width: 100%;
+            margin: 0px;
+        }
+        .prd{
+            text-align: center;
+            padding: 0px;
+        }
         &-heading {
             .heading {
-                font-size: 34px;
+                font-size: 32px;
             }
 
             .view-more {
-                margin-top: 20px;
+                margin-top: 15px;
                 font-size: 10px;
             }
         }
@@ -894,8 +1059,11 @@
            
         }
         &-bottom{
-            right: 40px;
+            right: -15px;
             top: 450px;
+            .line{
+                width: 30px;
+             }
         }
         .banner-content{
             left: 40px;
@@ -942,13 +1110,34 @@
         .prd-2 {
             padding: 0px
         }
-        .banner-1 {
-            .sale-sm-banner{
-                width: 25%;
-                position: absolute;
-                top: 17%;
-                right: 6%;
-            }       
+            .banner-1 {
+         img{
+            width: 100%;
+         }
+         &-inner{
+             width: 97%;
+             height: 100%;
+             .content{
+                height: 140px;
+                width: 170px;
+                top: 12%;
+                right: 1%;
+                &-1{
+                    font-size: 15px;
+                    margin-top: 5%;
+                }
+                &-2{
+                    font-size: 65px;
+                    margin-top: -16%;
+                }
+                &-3{
+                    font-size: 15px;
+                }
+                &-4{
+                    font-size: 12px;
+                }
+             }
+         }
     }
         .banner-1,
         .banner-4 {
@@ -957,8 +1146,30 @@
             }
         }
         .feature-items-prd{
-            font-size: 18px;
-            margin-top: -95px;
+            font-size: 15px;
+            margin-top: -80px;
+        }
+    .banner-2{
+            &-name{
+                bottom: 108px;
+               font-size: 10px;
+               left: 60px;
+            }
+            &-prd{
+                font-size: 36px;
+                left: 60px;
+                
+            }
+        }
+    .banner-4{
+            &-name{
+                top: 40px;
+                left: 40px;
+            }
+            &-note{
+                top: 170px;
+                left: 42px;
+            }
         }
     }
 //feature-prd
@@ -994,6 +1205,30 @@
                 img{
                     width: 100%;
                 }
+            }
+        }
+    }
+    .feature-items{
+        .banner-2{
+            &-name{
+                font-size: 10px;
+                bottom: 95px;
+                left: 40px;
+               
+            }
+            &-prd{
+                font-size: 32px;
+                left: 40px;
+            }
+        }
+    .banner-4{
+            &-name{
+                font-size: 38px;
+                top: 15px;
+            }
+            &-note{
+                font-size: 10px;
+                top: 115px;
             }
         }
     }
@@ -1035,19 +1270,55 @@
             padding: 0px
         }
         .banner-1 {
-                .sale-sm-banner{
-                    width: 30%;
-                    position: absolute;
-                    top: 17%;
-                    right: 6%;
-                }       
-        }
+           
+            &-inner{
+             width: 97%;
+             .content{
+                height: 255px;
+                width: 210px;
+                top: 23%;
+                right: 3%;
+                &-1{
+                    font-size: 20px;
+                    margin-top: 5%;
+                }
+                &-2{
+                    font-size: 70px;
+                }
+                &-3{
+                    font-size: 18px;
+                }
+                &-4{
+                    font-size: 13px;
+                }
+             }
+            }
+       }
         .banner-1,
         .banner-4 {
             img {
                 max-width: 96%;
             }
         }
+        .banner-2{
+                &-name{
+                    bottom: 122px;
+                    left: 120px;
+                   
+                }
+                &-prd{
+                    font-size: 50px;
+                    left: 120px;
+                }
+            }
+        .banner-4{
+                &-name{
+                    top: 90px;
+                }
+                &-note{
+                    top: 215px;
+                }
+            }
     }
 
     .feature-prd {
@@ -1064,6 +1335,17 @@
         }
 
     }
+    .feature-items{
+        .banner-2{
+            &-name{
+                left: 60px;
+            }
+            &-prd{
+                left: 60px;
+            }
+        }
+       
+    }
 }
 
 @media (min-width: 1720px){
@@ -1074,6 +1356,38 @@
             }
             
         }
+        .banner-1 {
+           
+           &-inner{
+            width: 97%;
+               .content{
+                width: 280px;
+                height: 340px;
+                right: 4.5%;
+            top: 16.5%;
+                &-1{
+                    
+                    font-size: 18px;
+                    margin: 15% 0 0 0;
+                }
+                &-2{
+               
+                    font-size: 100px;
+                    margin: -4% 0 0 0;
+                    
+                }
+                &-3{
+                    font-size: 24px;
+                    margin: -2% 0 0 0;
+                    
+                }
+                &-4{
+                    font-size: 14px;
+                    margin: 21% 0 0 0;
+                }
+               }
+           }
+      }
        .prd-2{
         .feature-items-prd{
             padding-right: 11px;
